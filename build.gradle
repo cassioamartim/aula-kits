@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com.aula'
+version '1.0-SNAPSHOT'
+
+compileJava.options.encoding('UTF-8')
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly files('C:/API/pandaspigot-server-1.8.8-R0.1-SNAPSHOT.jar')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+tasks.register('copyJar', Copy) {
+    from 'build/libs/aula-kits-1.0-SNAPSHOT.jar'
+    into 'C:/Users/Cassio/Desktop/Panda Server/plugins/'
+}
+
+test {
+    useJUnitPlatform()
+}
