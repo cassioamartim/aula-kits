@@ -1,5 +1,6 @@
 package com.aula.kit;
 
+import com.aula.kit.list.Camel;
 import com.aula.kit.list.Kangaroo;
 import com.aula.kit.list.PvP;
 import org.bukkit.inventory.ItemStack;
@@ -19,7 +20,8 @@ public enum KitType {
     }),
 
     PVP(new PvP()),
-    KANGAROO(new Kangaroo());
+    KANGAROO(new Kangaroo()),
+    CAMEL(new Camel());
 
     private final Kit kit;
 

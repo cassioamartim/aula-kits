@@ -2,6 +2,7 @@ package com.aula;
 
 import com.aula.account.storage.AccountStorage;
 import com.aula.command.KitCommand;
+import com.aula.kit.list.Camel;
 import com.aula.kit.list.Kangaroo;
 import com.aula.listener.PlayerListener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,6 +21,7 @@ public class Main extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         getServer().getPluginManager().registerEvents(new Kangaroo(), this);
+        getServer().getPluginManager().registerEvents(new Camel(), this);
 
         getServer().getCommandMap().register("kit", new KitCommand());
     }
